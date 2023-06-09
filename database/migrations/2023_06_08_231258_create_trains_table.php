@@ -26,8 +26,8 @@ return new class extends Migration
           $table->string('arrival_time', 5);
           $table->string('train_code', 5)->unique();
           $table->tinyInteger('number_of_carriages')->unsigned()->default(0);
-          $table->boolean('in_time');
-          $table->boolean('deleted');
+          $table->boolean('in_time')->nullable();
+          $table->boolean('deleted')->nullable();
 
 
         });
