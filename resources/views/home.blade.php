@@ -7,11 +7,11 @@
 
 @section('content')
 
-<div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: calc(100vh - 90px - 150px);">
+<div class="container p-5" style="min-height: calc(100vh - 90px - 150px);">
 
-  <table class="table">
-    <thead>
-      <tr>
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr class="">
         <th scope="col">#</th>
         <th scope="col">Azienda</th>
         <th scope="col">Stazione di partenza</th>
