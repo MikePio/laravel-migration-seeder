@@ -12,7 +12,7 @@
   <table class="table table-bordered">
     <thead class="thead-dark">
       <tr class="">
-        <th scope="col">#</th>
+        <th scope="col">#ID</th>
         <th scope="col">Azienda</th>
         <th scope="col">Stazione di partenza</th>
         <th scope="col">Stazione di arrivo</th>
@@ -25,18 +25,23 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-          <td>5</td>
-          <td>6</td>
-          <td>7</td>
-          <td>8</td>
-          <td>9</td>
+      @foreach ($trains as $train)
+
+        <tr>
+          <td>{{ $train->id }}</td>
+          <td>{{ $train->agency }}</td>
+          <td>{{ $train->departure_station }}</td>
+          <td>{{ $train->arrival_station }}</td>
+          <td>{{ $train->departure_time }}</td>
+          <td>{{ $train->arrival_time }}</td>
+          <td>{{ $train->train_code }}</td>
+          <td>{{ $train->number_of_carriages }}</td>
+          <td>{{ $train->in_time }}</td>
+          <td>{{ $train->deleted }}</td>
         </tr>
+
+      @endforeach
+
 
     </tbody>
   </table>
